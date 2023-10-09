@@ -12,6 +12,8 @@ public class Creature {
     public String health;
     public String damage;
 
+    public int countOfDead;
+
     private int damagePointNow;
     
     public int getDamagePointNow() {

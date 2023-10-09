@@ -5,6 +5,7 @@ public class Player extends Creature {
 
 
     private int chanceToAlive;
+
     private int healthPoint;
 
     public Player(int attackPoint, int protectionPoint, int healthPoint, int minDamagePiont, int maxDamagePoint) {

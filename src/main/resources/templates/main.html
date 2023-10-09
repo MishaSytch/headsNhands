@@ -10,14 +10,16 @@
         <div th:each="creature : ${creatures}">
             <table>
                 <tr>
-                    <th>Type of Player:</th>
-                    <th>Health points:</th>
-                    <th>Damage points:</th>
+                    <th>Type of Player: </th>
+                    <th>Health points: </th>
+                    <th>Damage points: </th>
+                    <th>Count of dead: </th>
                 </tr>
                 <tr>
                     <td th:text="${creature.type}"></td>
                     <td th:text="${creature.health}"></td>
                     <td th:text="${creature.damage}"></td>
+                    <td th:text="${creature.countOfDead}"></td>
                 </tr>
                 <br>
             </table>
