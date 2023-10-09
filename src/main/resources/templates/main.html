@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Battle</title>
+    </head>
+    <body>
+        <h1>Welcome to the BATTLE!!!</h1>
+        <div th:each="creature : ${creatures}">
+            <table>
+                <tr>
+                    <th>Type of Player:</th>
+                    <th>Health points:</th>
+                    <th>Damage points:</th>
+                </tr>
+                <tr>
+                    <td th:text="${creature.type}"></td>
+                    <td th:text="${creature.health}"></td>
+                    <td th:text="${creature.damage}"></td>
+                </tr>
+                <br>
+            </table>
+            <a th:href="@{/{type}(type=${creature.type})}">
+                <span th:text="${creature.type}"></span>, attack to enemy!
+            </a>
+        </div>
+
+    </body>
+</html>
